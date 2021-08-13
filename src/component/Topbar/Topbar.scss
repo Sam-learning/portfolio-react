@@ -1,0 +1,58 @@
+.topbar{
+    background-color: white;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            font-size: 40px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .mail{
+            display: flex;
+            align-items: center;
+            .mail-icon{
+                margin-right: 5px !important;
+            }
+        }
+
+        .rightbox{
+            width: 28px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: black;
+                cursor: pointer;
+                transform-origin: left;
+            }
+        }
+    }
+    &.active{
+        background-color: rgb(16, 16, 126);
+        color: white;
+        .logo{
+            color: white;
+        }
+        .rightbox{
+            
+            span{
+                background-color: white;
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.app{
+    height: 100vh;
+
+    .section{
+        // 減號要留空格
+        height: calc(100vh - 70px);
+        position: relative;
+        background-color: black;
+        // scroll 讓每次停住的點都剛好停在component的開頭
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;  //滑順一點
+
+        scrollbar-width: none;  //for firefox 把右邊scrollbar去掉
+        &::-webkit-scrollbar{
+            display: none;   //for safari, chrome
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
+
